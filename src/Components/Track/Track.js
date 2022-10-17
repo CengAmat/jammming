@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Track.css";
 
-export default class Track extends Component {
+export class Track extends Component {
   constructor(props) {
     super(props);
     this.addTrack = this.addTrack.bind(this);
