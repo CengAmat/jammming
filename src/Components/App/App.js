@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { SearchResults } from "../SearchResults/SearchResults";
@@ -26,6 +26,16 @@ class App extends React.Component {
         album: "The Rings of Power",
       },
     ];
+    this.addTrack = this.addTrack.bind(this);
+  }
+
+  addTrack(track) {
+    if (
+      this.state.playlistTracks.find((savedTrack) => savedTrack.id === track.id)
+    ) {
+      return;
+    }
+    this.setState({ playlistTracks: track });
   }
 
   render() {
@@ -37,7 +47,7 @@ class App extends React.Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            <SearchResults searchResults={this.state.searchResults} />
+            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
             <Playlist playlistTracks={this.state.playlistTracks} />
           </div>
         </div>
