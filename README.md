@@ -7,6 +7,8 @@ A [Codecademy Pro Intensive](https://pro.codecademy.com/) project.
 
 ### View the app
 
+http://cengospoty.surge.sh
+
 * On [Heroku](http://jammming.s3-website-us-east-1.amazonaws.com)
 
 * In the project directory, run:
